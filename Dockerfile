@@ -9,4 +9,6 @@ RUN cp --no-clobber /docker-registry/config_sample.yml /docker-registry/config.y
 
 EXPOSE 5000
 
+VOLUME ['/opt/docker/registry']
+
 CMD cd /docker-registry && ./setup-configs.sh && ./run.sh
