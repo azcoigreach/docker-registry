@@ -1,7 +1,10 @@
 Docker-Registry
 ===============
 
-[![Build Status](https://travis-ci.org/dotcloud/docker-registry.png)](https://travis-ci.org/dotcloud/docker-registry)
+The following is a fork of [docker/docker-registry](http://github.com/docker/docker-registry) to build the Docker Registry for the Raspberry Pi.
+
+It is intended to work the same as the X86_64 version.
+
 
 Create the configuration
 ------------------------
