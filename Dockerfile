@@ -12,9 +12,9 @@ RUN apt-get update \
 # Install pip
     && apt-get install -y \
         swig \
-	build-essential \
+	    build-essential \
         python-pip \
-# Install deps for backports.lzma (python2 requires it)
+        # Install deps for backports.lzma (python2 requires it)
         python-dev \
         python-mysqldb \
         libssl-dev \
@@ -23,7 +23,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /docker-registry
-#COPY ./config/boto.cfg /etc/boto.cfg
+COPY ./config/boto.cfg /etc/boto.cfg
 
 # python-rsa
 run pip install rsa
