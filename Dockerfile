@@ -5,7 +5,7 @@
 # TO_BUILD:       docker build -rm -t rpi-registry .
 # TO_RUN:         docker run -p 5000:5000 rpi-registry
 
-FROM hypriot/rpi-python
+FROM azcoigreach/rpi-python
 
 # Update
 RUN apt-get update \
@@ -23,7 +23,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY . /docker-registry
-COPY ./config/boto.cfg /etc/boto.cfg
+#COPY ./config/boto.cfg /etc/boto.cfg
 
 # python-rsa
 run pip install rsa
